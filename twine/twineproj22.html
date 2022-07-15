@@ -10,15 +10,15 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play twineproj22.</tw-noscript></noscript></tw-story>
 <tw-storydata name="twineproj22" startnode="1" creator="Twine" creator-version="2.3.16" ifid="84A7E719-527F-4AC5-8443-204374CBE0D4" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body, tw-story {
-background-color: #172774;
-color: #EEEEEE;
+background-color: #F5F5DC;
+color: #0000FF;
 font-family: 'PT Sans Caption', sans-serif; font-size: 1.1em;
 }
 
-tw-link, .enchantment-link { color: #FF0075;
+tw-link, .enchantment-link { color: #CD5C5C;
 }
 .visited {
-color: #FF0075;
+color: #CD5C5C;
 }
 
 tw-story[tags~="begin"] {
@@ -31,19 +31,156 @@ tw-story[tags~="dusk"] {
 background-image: url("https://cyh15.github.io/twinesummerhyy1522/images/sunrise.png");
 background-repeat: no-repeat;
 background-size:cover; 
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="First Passage" tags="" position="706,380" size="100,100">A humming noise woke you up. Your head feels weird, it&#39;s like someone bashed your skull with a baseball bat but your head is numb so you can only feel it a little bit. You don&#39;t really remember what happened yesterday, not even last night in fact. 
+}
+
+tw-story[tags~="porch"] {
+background-image: url("https://cyh15.github.io/twinesummerhyy1522/images/porch2.png");
+background-repeat: no-repeat;
+background-size:cover; 
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="First Passage" tags="" position="705,380" size="100,100">A humming noise woke you up. Your head feels weird, it&#39;s like someone bashed your skull with a baseball bat but your head is numb so you can only feel it a little bit. You don&#39;t really remember what happened yesterday, not even last night in fact. 
 
 The room you&#39;re in is very dark, you reckon it&#39;s still late at night. You want to know what time it is:
 
 [[Look through the window-&gt;Window]]
 
-[[Look for your phone-&gt;Phone]]</tw-passagedata><tw-passagedata pid="2" name="Second Passage " tags="" position="1104,246" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="3" name="Window" tags="begin" position="491,565" size="100,100">You look through the window, and you see the first ray of light is just piercing through the clouds. Just in the front yard, the silhoutte of a giant pine tree looks goregeous.
+[[Look for your phone-&gt;Phone]]</tw-passagedata><tw-passagedata pid="2" name="Window" tags="begin" position="340,632" size="100,100">You look through the window, and you see the first ray of light is just piercing through the clouds. Just in the front yard, the silhoutte of a giant pine tree looks goregeous.
 
-[[Hmmm? Pine trees?-&gt;Window 2]]</tw-passagedata><tw-passagedata pid="4" name="Phone" tags="" position="977,693" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="Window 2" tags="dusk" position="510,729" size="100,100">You just realized that you never had pine trees in your yard, and it is only until now that you noticed something&#39;s not right. With a bit of light coming through the window, you carefully examine the room that you are in.
+[[Hmmm? Pine trees?-&gt;Window 2]]</tw-passagedata><tw-passagedata pid="3" name="Phone" tags="" position="1111,599" size="100,100">Before sleep you usually put your phone on your night stand. You look for your phone but it&#39;s not there. Where is my phone?
+
+(more:)[[[Look through the window-&gt;Window]]]
+
+(if:(history: where its name contains &quot;Window 2&quot;)&#39;s length &gt;= 1)[[[Get up-&gt;Room]]]</tw-passagedata><tw-passagedata pid="4" name="Window 2" tags="dusk" position="683,704" size="100,100">You just realized that you never had pine trees in your yard, and it is only until now that you&#39;ve noticed something&#39;s wrong. With a bit of light coming through the window, you carefully examine the room that you are in.
 
 Soon you realized that this is not your home! Where am I?
 
-[[Look for your phone-&gt;Phone]]</tw-passagedata><tw-passagedata pid="6" name="startup" tags="startup" position="402,282" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(more:)[[[Look for your phone-&gt;Phone]]]
+
+(if:(history: where its name contains &quot;Phone&quot;)&#39;s length is 1)[[[Get up-&gt;Room]]]</tw-passagedata><tw-passagedata pid="5" name="Room" tags="" position="681,913" size="100,100">You went out of your room and turn on the lights. It seems that you&#39;re staying alone in this tiny prefab house. Carefully, you explore the room you&#39;re staying. 
+
+[[Go to the dinning room-&gt;Dinning Room]]</tw-passagedata><tw-passagedata pid="6" name="startup" tags="startup" position="242,263" size="100,100">{
+
+(set: $event to (random: 1, 2)) 
+(set: $bike to false) 
+(set: $money to false) 
+
+}
+ </tw-passagedata><tw-passagedata pid="7" name="Bathroom" tags="" position="457,1191" size="100,100">You found a toothbrush and toothpaste and brushed your teeth. Oddly enough, you noticed that the water is (text-colour:red)[swirling clockwise] down the drain.
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/toothbrush.png&quot; style=&quot;width:30%&quot;&gt;
+
+[[Return for breakfast.-&gt;Eat]]</tw-passagedata><tw-passagedata pid="8" name="Dinning Room" tags="" position="688,1057" size="100,100">You went into the dinning room, where you found a fridge and some food in it which you can have. 
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/fridge.png&quot; style=&quot;width:30%&quot;&gt;
+
+[[Make a breakfast for yourself.-&gt;Sanitory]]
+[[Go brush your teeth first.-&gt;Bathroom]]
+</tw-passagedata><tw-passagedata pid="9" name="Eat" tags="" position="694,1205" size="100,100">You made a sandwich for yourself and now you are ready to go and determined to find out (text-colour:red)[Where you are]!
+
+[[Go out to the yard.-&gt;Yard]]</tw-passagedata><tw-passagedata pid="10" name="Yard" tags="porch" position="566,1366" size="100,100">Out in the yard you are standing on the porch. Nothing is particular special here, a swing and a hanging rack stands on the small lawn. However, you did noticethat this place you&#39;re in feels (text-colour:red)[particularly warm].
+
+ &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/porch.png&quot; style=&quot;width:30%&quot;&gt;
+ 
+[[ Go out into town and explore more.-&gt;Town]]
+
+(if:(history: where its name contains &quot;Dinning Room2&quot;)&#39;s length is 1)[[[Head out for the second time.-&gt;Street]]]
+
+(if:(history: where its name contains &quot;Street&quot;)&#39;s length is 1)[[[???-&gt;Bike]]]</tw-passagedata><tw-passagedata pid="11" name="Sanitory" tags="" position="411,1028" size="100,100">No! You have to brush your teeth first! What did mom tell you? Always brush your teeth in the morning!
+
+[[Go brush your teeth.-&gt;Bathroom]]</tw-passagedata><tw-passagedata pid="12" name="Town" tags="" position="479,1521" size="100,100">Walking down the streets you find a lot of wierd sculptures. There&#39;s one for (text-colour:red)[Tagore] and one for (text-colour:red)[Gandhi] in the center of the town. Could it be that I&#39;m in the country where these two are from? The population here is not very large apparently, but the people you saw on street all speaks (text-colour:red)[Spanish]. Now that you wish you had taken Spanish as an elective in school.
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/gandhi.png&quot; style=&quot;width:30%&quot;&gt; &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/tagore.png&quot; style=&quot;width:30%&quot;&gt;
+   
+[[Explore further.-&gt;Hill]]</tw-passagedata><tw-passagedata pid="13" name="Hill" tags="" position="609,1654" size="100,100">Climbing up a hill, you got a better view at the small town you are in now that you have some elevation. Far away you can see a huge body of water. Perhaps you are at a small town by the sea?
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/hill.png&quot; style=&quot;width:70%&quot;&gt;
+
+[[Go to a church just down the hill.-&gt;Church]]</tw-passagedata><tw-passagedata pid="14" name="Unable" tags="" position="676,1814" size="100,100">You&#39;ve been exploring the town on foot for half a day now, and your weariness have wore you out. You are feeling hungry and tired.
+
+[[Go find a diner to have lunch.-&gt;Poor]]
+(if:(history: where its name contains &quot;Poor&quot;)&#39;s length is 1)[[[Go back home.-&gt;Dinning Room2]]]</tw-passagedata><tw-passagedata pid="15" name="Church" tags="" position="328,1917" size="100,100">You went into the church. It was a small but delicate church, and the clergymen here practice Catholism apparently. The painted glass looks very beautiful.
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/Antique.gif&quot; style=&quot;width:40%&quot;&gt; &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/church.png&quot; style=&quot;width:40%&quot;&gt;
+
+[[I already know where I&#39;m at!-&gt;Choice]]
+
+(if:(history: where its name contains &quot;False&quot;)&#39;s length &gt;= 1)[[[Go to seaside.-&gt;Unable]]]</tw-passagedata><tw-passagedata pid="16" name="Poor" tags="" position="874,1930" size="100,100">You don&#39;t have any money on you...
+
+[[Go back.-&gt;Unable]]</tw-passagedata><tw-passagedata pid="17" name="Choice" tags="" position="689,2160" size="100,100">I&#39;m in:
+
+[[San Diego, CA-&gt;False]]
+[[India-&gt;False]]
+[[Mexico-&gt;False]]
+[[Spain-&gt;False]]
+[[Argentina-&gt;False]]
+(if: $money is true)[[Punta Arenas, Chile-&gt;Congrats]]</tw-passagedata><tw-passagedata pid="18" name="False" tags="" position="1014,2123" size="100,100">Incorrect Answer!
+
+[[Go back.-&gt;Church]]</tw-passagedata><tw-passagedata pid="19" name="Dinning Room2" tags="" position="834,1754" size="100,100">You went back home and made youself some lunch. Now you are good to go again!
+
+[[Go to yard.-&gt;Yard]]
+
+(if: $bike is true)[[[Search cabinet.-&gt;Cabinet]]]</tw-passagedata><tw-passagedata pid="20" name="Cabinet" tags="" position="1160,1994" size="100,100">You opened the cabinet and saw some money in it.
+
+(set: $money to true) 
+ 
+[[Take the money.-&gt;Money]]</tw-passagedata><tw-passagedata pid="21" name="Money" tags="" position="1329,2074" size="100,100">It&#39;s a currency you&#39;ve never seen before.
+
+[[Head back.-&gt;Street]]</tw-passagedata><tw-passagedata pid="22" name="Bike" tags="" position="1092,1508" size="100,100">In a small warehouse you found a bike that appears to be functional!
+
+(set: $bike to true) 
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/bike.png&quot; style=&quot;width:30%&quot;&gt;
+
+[[Head back to the yard.-&gt;Street]]</tw-passagedata><tw-passagedata pid="23" name="Street" tags="" position="940,1595" size="100,100">But you have no vehicles nor any money!
+
+[[Head back.-&gt;Yard]]
+
+(if: $bike is true)[[[Now you got the bike, you need some money just in case you need it.-&gt;Dinning Room2]]]
+ 
+ (if: $money is true)[[[Head out to seaside!-&gt;Sea]]]</tw-passagedata><tw-passagedata pid="24" name="Sea" tags="" position="1358,1698" size="100,100">By the sea you saw a lot of seagulls. 
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/oceanbird.gif&quot; style=&quot;width:30%&quot;&gt; &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/birdbridge.gif&quot; style=&quot;width:50%&quot;&gt;
+
+[[Explore.-&gt;Sign]]</tw-passagedata><tw-passagedata pid="25" name="Sign" tags="" position="1461,1902" size="100,100">Now that you have a bike you can explore further. No so long afterwards you saw a huge sign which looks like to be bearing the name of this town!
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/congrats.png&quot; style=&quot;width:80%&quot;&gt;
+
+However you&#39;ve heard of this place, to be honest you&#39;re not even sure if this is the name of this place.
+
+[[Explore.-&gt;Magellan]]</tw-passagedata><tw-passagedata pid="26" name="Magellan" tags="" position="1477,2050" size="100,100">Next to the beach you found a bust which has a plaque on it that reads:
+
+(text-colour:red)[Magellan] --- The Great Explorer
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/magellan.png&quot; style=&quot;width:30%&quot;&gt;
+
+This is the first English writing you&#39;ve seen in today!
+
+[[It&#39;s getting late so you headed to the diner for supper.-&gt;Diner]]</tw-passagedata><tw-passagedata pid="27" name="Diner" tags="" position="1407,2241" size="100,100">The local diner looks quite fancy for such a small town.
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/Diner.png&quot; style=&quot;width:30%&quot;&gt;
+
+You head in and ordered a meal. Due to language barrier, the waiter didn&#39;t really understood what you want. So he just randomly serve you some meal that was already there in the kitchen while you were looking elsewhere.
+
+[[What did you get?-&gt;Meal]]</tw-passagedata><tw-passagedata pid="28" name="Meal" tags="" position="1403,2391" size="100,100">(if: $event is 1)[It is a slow cooked salmon. Exactly what you ordered! It&#39;s almost a miracle the waiter get it right! Lucky you! 
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/salmon.png&quot; style=&quot;width:30%&quot;&gt;] 
+(elseif: $event is 2)[A lamb shank. Not at all what you ordered, but you can hardly blame the waiter. &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/mutton.png&quot; style=&quot;width:30%&quot;&gt;]
+
+[[Eat.-&gt;Wall]]</tw-passagedata><tw-passagedata pid="29" name="Wall" tags="" position="1186,2381" size="100,100">After finishing your meal you looked at the wall of the diner, and to your astonishment, the walls are covered by all kinds of currency from different countries, train tickets and plane tickets, business cards and all sorts. It seems that this town might be a sightseeing town, and tourists are doing everything they can to mark their memories here...
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/souvenir.png&quot; style=&quot;width:30%&quot;&gt; &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/souvenir2.png&quot; style=&quot;width:30%&quot;&gt;
+
+[[Head out.-&gt;Beauty]]</tw-passagedata><tw-passagedata pid="30" name="Beauty" tags="" position="1007,2377" size="100,100">The ocean here really is awe-inspring and magnificent. Before heading back, you took one last look at this tranquil sight.
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/beach.png&quot; style=&quot;width:50%&quot;&gt; &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/beachbottle.png&quot; style=&quot;width:30%&quot;&gt;
+
+&lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/ocean.png&quot; style=&quot;width:40%&quot;&gt;   &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/woman.png&quot; style=&quot;width:40%&quot;&gt;
+
+[[Head back home.-&gt;Final]]</tw-passagedata><tw-passagedata pid="31" name="Final" tags="" position="822,2385" size="100,100">And just when you thought you are never going to figure out where you are, on your way back home you came across a huge district sign, and you feel ecstatic!
+
+ &lt;img src=&quot;https://cyh15.github.io/twinesummerhyy1522/images/bingo.png&quot; style=&quot;width:80%&quot;&gt;
+ 
+ [[Where are you?-&gt;Choice]]</tw-passagedata><tw-passagedata pid="32" name="Congrats" tags="" position="566,2316" size="100,100">Congratulations! You&#39;ve solved the mystery!</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
